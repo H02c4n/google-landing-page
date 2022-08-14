@@ -30,8 +30,151 @@ ul > li {
   font-size: 1.1rem;
 }
 
+#app-icon {
+  vertical-align: middle;
+  opacity: 0.5;
+}
+
+.icon {
+  position: relative;
+}
+
+.icon::after {
+  content: "";
+  position: absolute;
+  width: 140%;
+  height: 130%;
+  top: -7px;
+  left: -6px;
+  background-color: rgba(240, 240, 240);
+  border-radius: 50%;
+  z-index: -1;
+  visibility: hidden;
+}
+
+.icon:hover::after {
+  visibility: visible;
+}
+
+#app-icon:hover {
+  opacity: 1;
+}
+
 .signin a {
-  background-color: blue;
+  background-color: #4086f4;
   color: #fff;
   padding: 5px;
+}
+
+.logo {
+  width: 17rem;
+  height: 5.75rem;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-image: url(./images/logo_color_272x92.png);
+}
+
+.searchbox {
+  width: 35%;
+  min-width: 400px;
+  height: 2.75rem;
+  border: 1px solid #dfe1e5;
+  border-radius: 24px;
+  margin: auto;
+  padding: 5px 8px 6px 14px;
+}
+
+.magn-glass {
+  width: 1.2rem;
+  height: 1.3rem;
+  display: inline-block;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+  margin-top: 7px;
+  background-image: url(./images/Magnifying_glass_icon.png);
+}
+
+.search-input {
+  display: inline-block;
+  width: 85%;
+}
+
+.search-input input {
+  width: 100%;
+  height: 2rem;
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.87);
+  border: none;
+  font-size: 20px;
+  outline: none;
+  padding-left: 4px;
+}
+
+.mic {
+  background-image: url(./images/google_microphone.png);
+  width: 1rem;
+  height: 1.5rem;
+  display: inline-block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 4px;
+}
+
+.buttons {
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.buttons button {
+  min-width: 5rem;
+  height: 2.2rem;
+  line-height: 27px;
+  background-color: #f8f9fa;
+  border: none;
+  padding: 0 16px;
+}
+
+.buttons button:hover {
+  background-color: #f8f9fa;
+  border: 1px solid #dadce0;
+}
+
+.languages {
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer {
+  background-color: #dadce0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.location {
+  height: 40px;
+}
+
+.info {
+  position: relative;
+  width: 100%;
+}
+
+.left {
+  position: absolute;
+  left: 10px;
+  height: 40px;
+  bottom: 10px;
+}
+
+.right {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  height: 40px;
 }
